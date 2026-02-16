@@ -1,0 +1,49 @@
+### VARIABLES DE CONFIGURACIÓN
+@hostname = localhost
+@port = 7299
+@host = https://{{hostname}}:{{port}}
+
+### 1. PRUEBA DE LOGIN EXITOSO (End-to-End)
+# Prueba con un correo que ya tengas en tu base de datos (Ej: darwinma03@uniandes.edu.ec)
+POST {{host}/api/Auth/login
+Content-Type: application/json
+
+{
+  "email": "darwinma03@uniandes.edu.ec",
+  "password": "TuPasswordAqui"
+}
+
+###
+
+### 2. PRUEBA DE LOGIN FALLIDO
+POST {{host}/api/Auth/login
+Content-Type: application/json
+
+{
+  "email": "usuario@noexiste.com",
+  "password": "clave_incorrecta"
+}
+
+###
+
+### 3. OBTENER TODOS LOS ESTUDIANTES
+GET {{host}/api/ApiEstudiantes
+Accept: application/json
+
+###
+
+### 4. REGISTRAR UN NUEVO ESTUDIANTE
+POST {{host}/api/ApiEstudiantes
+Content-Type: application/json
+
+{
+  "nombre": "Prueba",
+  "apellido": "Docente",
+  "cedula": "1800000000",
+  "email": "docente@uniandes.edu.ec"
+}
+
+###
+
+### 5. ELIMINAR UN ESTUDIANTE (Cambia el ID por uno real)
+DELETE {{host}/api/ApiEstudiantes/1
