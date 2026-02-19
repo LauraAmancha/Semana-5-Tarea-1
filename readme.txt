@@ -52,7 +52,7 @@ CORS Policy: Habilitada en Program.cs para permitir peticiones desde el puerto 4
 🔐 3. Credenciales para Demo (Acceso Total)
 Para realizar una prueba rápida del sistema sin crear nuevos usuarios, utiliza:
 
-Usuario: darwinma03@uniandes.edu.ec
+Usuario: laura11@uniandes.edu.ec
 
 Contraseña: Admin123
 
@@ -75,6 +75,6 @@ Plaintext
 │   └── PruebasSistema.http # Pruebas de integración
 └── Frontend_Angular/       # Código fuente Angular 19 (Standalone)
     └── src/app/            # Componentes y Servicios
-Desarrollado por: Dario Moyano Alvarez 
+Desarrollado por: Laura Grimaneza Amancha Moyón 
 
  UNIANDES 2026
